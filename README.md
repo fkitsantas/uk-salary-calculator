@@ -1,4 +1,9 @@
-# UK After-Tax Salary Calculator
+# UK After-Tax Salary Calculator (React.js)
+
+![UK Salary Calculator Screenshot](https://i.imgur.com/TnYEf3O.png) 
+## Live Demo
+
+Visit the live demo deployed on GitHub pages, to see the UK Salary Calculator in action: [Live Demo](https://fkitsantas.github.io/uk-salary-calculator/)
 
 ## Table of Contents
 - [About The Project](#about-the-project)
@@ -16,26 +21,27 @@ This project is a simple React application that calculates the after-tax salary 
 
 This application is built using the following technologies:
 
-- React: This JavaScript library is used for building the user interface of the application. 
-- Material-UI: used for styling the application and providing a consistent and modern look and feel.
-- Jest and React Testing Library: used for writing and running tests to ensure the application works as expected.
-- JavaScript: The core functionality of the application.
-- GitHub Pages: Hosting the application online.
+- **React**: JavaScript Framework used for building the user interface of the application.
+- **JavaScript**: The programming language used to handle calculations and application logic.
+- **Material-UI**: used for styling the application and providing a consistent and modern look and feel.
+- **Jest and React Testing Library**: used for writing and running tests to ensure the application works as expected.
+- **GitHub Pages**: Hosting the React application online.
 
 ## Features
 
 - Input your gross salary to calculate your after-tax salary.
-- The application provides a detailed breakdown of your salary on an annual, monthly, weekly, and hourly basis.
+- The application provides a detailed breakdown of the monthly, weekly, and hourly earnings, along with the respective tax deductions.
 - The application displays the gross salary, net salary, and tax deductions for each time period.
 
 ## Installation
 
 To install the application, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/fkitsantas/uk-salary-calculator.git`
-2. Navigate to the project directory: `cd uk-salary-calculator`
-3. Install the dependencies: `npm install`
-4. Start the application: `npm start`
+1. Clone the repository to your local machine using `git clone https://github.com/fkitsantas/uk-salary-calculator.git`
+2. Navigate to the project directory.: `cd uk-salary-calculator`
+3. Install the necessary dependencies with `npm install`.
+4. Start the local development server with `npm start`.
+5. The application should now be running at `http://localhost:3000`.
 
 ## Testing
 
