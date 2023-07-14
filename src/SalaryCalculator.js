@@ -77,24 +77,24 @@ function SalaryCalculator() {
             <TableBody>
                 <TableRow>
                   <TableCell component="th" scope="row">Gross</TableCell>
-                  <TableCell align="right">£{salaryDetails.annual.gross}</TableCell>
-                  <TableCell align="right">£{salaryDetails.monthly.gross}</TableCell>
-                  <TableCell align="right">£{salaryDetails.weekly.gross}</TableCell>
-                  <TableCell align="right">£{salaryDetails.hourly.gross}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.annual.gross).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.monthly.gross).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.weekly.gross).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.hourly.gross).toFixed(2)}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell component="th" scope="row">Net</TableCell>
-                  <TableCell align="right">£{salaryDetails.annual.net}</TableCell>
-                  <TableCell align="right">£{salaryDetails.monthly.net}</TableCell>
-                  <TableCell align="right">£{salaryDetails.weekly.net}</TableCell>
-                  <TableCell align="right">£{salaryDetails.hourly.net}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.annual.net).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.monthly.net).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.weekly.net).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.hourly.net).toFixed(2)}</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell component="th" scope="row">Deductions</TableCell>
-                  <TableCell align="right">£{salaryDetails.annual.deductions}</TableCell>
-                  <TableCell align="right">£{salaryDetails.monthly.deductions}</TableCell>
-                  <TableCell align="right">£{salaryDetails.weekly.deductions}</TableCell>
-                  <TableCell align="right">£{salaryDetails.hourly.deductions}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.annual.deductions).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.monthly.deductions).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.weekly.deductions).toFixed(2)}</TableCell>
+                  <TableCell align="right">£{Number(salaryDetails.hourly.deductions).toFixed(2)}</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
