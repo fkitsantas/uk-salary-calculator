@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField, Card, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@material-ui/core';
+import { Button, TextField, Card, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 
 function SalaryCalculator() {
   // State for gross salary input
