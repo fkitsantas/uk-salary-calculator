@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextField, Card, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
+import { Button, TextField, Card, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useMediaQuery, Grid } from '@mui/material';
 
 function SalaryCalculator() {
   // State for gross salary input
@@ -40,12 +40,16 @@ function SalaryCalculator() {
       weekly: { gross: grossSalaryWeekly, net: netSalaryWeekly, deductions: tax / 52 },
       hourly: { gross: grossSalaryHourly, net: netSalaryHourly, deductions: tax / 52 / 40 }
     });
-  }  
+  }
+
+  // Use media query to adjust card width
+  const matches = useMediaQuery('(max-width:600px)');
+  const cardWidth = matches ? '90%' : '50%';
 
   // Render component
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f5f5f5' }}>
-      <Card style={{ width: '50%', padding: '20px' }}>
+    <Grid container justifyContent="center" alignItems="center" style={{ height: '100vh', backgroundColor: '#f5f5f5' }}>
+      <Card style={{ width: cardWidth, padding: '20px' }}>
         <Typography variant="h4" style={{ textAlign: 'center', marginBottom: '20px' }}>UK After-Tax Salary Calculator</Typography>
         <TextField
           id="gross-salary"
@@ -63,15 +67,15 @@ function SalaryCalculator() {
           Calculate
         </Button>
         {salaryDetails.annual && (
-          <TableContainer component={Card} style={{ width: '100%' }}>
+          <TableContainer component={Card} style={{ width: '100%', overflowX: 'auto' }}>
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell style={{ fontSize: '0.875rem', whiteSpace: 'normal', wordWrap: 'break-word' }}></TableCell>
-                <TableCell align="right" style={{ fontSize: '0.875rem', whiteSpace: 'normal', wordWrap: 'break-word' }}>Annual</TableCell>
-                <TableCell align="right" style={{ fontSize: '0.875rem', whiteSpace: 'normal', wordWrap: 'break-word' }}>Monthly</TableCell>
-                <TableCell align="right" style={{ fontSize: '0.875rem', whiteSpace: 'normal', wordWrap: 'break-word' }}>Weekly</TableCell>
-                <TableCell align="right" style={{ fontSize: '0.875rem', whiteSpace: 'normal', wordWrap: 'break-word' }}>Hourly</TableCell>
+                <TableCell></TableCell>
+                <TableCell align="right">Annual</TableCell>
+                <TableCell align="right">Monthly</TableCell>
+                <TableCell align="right">Weekly</TableCell>
+                <TableCell align="right">Hourly</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -101,7 +105,7 @@ function SalaryCalculator() {
           </TableContainer>
         )}
       </Card>
-    </div>
+    </Grid>
   );
 }
 
